@@ -40,7 +40,7 @@ const CardGenerator = () => {
           <label>Survivor Name</label>
           <input 
             type="text" 
-            placeholder="e.g. Diamond Hands Dave" 
+            placeholder="Enter Name" 
             value={name} 
             onChange={(e) => setName(e.target.value)} 
           />
@@ -50,7 +50,7 @@ const CardGenerator = () => {
           <label>2025 PnL (Profit/Loss)</label>
           <input 
             type="text" 
-            placeholder="e.g. -99% or +10000%" 
+            placeholder="Enter PnL %" 
             value={pnl} 
             onChange={(e) => setPnl(e.target.value)} 
           />
@@ -106,7 +106,7 @@ const CardGenerator = () => {
               </div>
 
               <div className="field-group">
-                <label>DoB (Date of Bagholding)</label>
+                <label>Date of Issue</label>
                 <div className="field-value">25 Dec 2025</div>
               </div>
 
