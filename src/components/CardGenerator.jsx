@@ -72,47 +72,76 @@ const CardGenerator = () => {
 
       <div className="preview-section">
         <div className="card-wrapper" ref={cardRef}>
-          <div className="card-header">
-            <div className="official-seal">OFFICIAL</div>
-            <div className="card-title">TRENCHES SURVIVOR PASS</div>
-            <div className="year-badge">2025</div>
-          </div>
+          <div className="card-background-pattern"></div>
           
-          <div className="card-body">
-            <div className="image-container">
-              {image ? (
-                <img src={image} alt="Survivor" />
-              ) : (
-                <div className="placeholder-image">NO IMAGE</div>
-              )}
-              <div className="verified-badge">✓ VERIFIED REKT</div>
+          <div className="card-top-row">
+            <div className="card-header-left">
+              <div className="header-title-bold">TSC</div>
+              <div className="header-subtitle">Trenches Survivor Card</div>
             </div>
-            
-            <div className="details-container">
-              <div className="detail-row">
-                <span className="label">NAME:</span>
-                <span className="value">{name || 'ANONYMOUS'}</span>
-              </div>
-              <div className="detail-row">
-                <span className="label">STATUS:</span>
-                <span className="value status-active">SURVIVING</span>
-              </div>
-              <div className="detail-row">
-                <span className="label">2025 PnL:</span>
-                <span className={`value pnl-value ${pnl.includes('-') ? 'rekt' : 'moon'}`}>
-                  {pnl || '0%'}
-                </span>
-              </div>
-              <div className="detail-row">
-                <span className="label">ID:</span>
-                <span className="value code">{Math.random().toString(36).substr(2, 9).toUpperCase()}</span>
+            <div className="card-header-right">
+              <div className="issued-by">Issued by <strong>TrenchCard</strong></div>
+              <div className="tsc-logo-circle">
+                <span>TSC</span>
+                <span className="small">CARDS</span>
               </div>
             </div>
           </div>
 
-          <div className="card-footer">
-            <p>"I survived the 2025 trenches and all I got was this card"</p>
-            <div className="barcode">||| || ||| | |||| |||</div>
+          <div className="card-main-content">
+            <div className="card-photo-section">
+              <div className="photo-frame">
+                {image ? (
+                  <img src={image} alt="Survivor" />
+                ) : (
+                  <div className="placeholder-image">PHOTO</div>
+                )}
+              </div>
+            </div>
+
+            <div className="card-details-section">
+              <div className="field-group">
+                <label>Name</label>
+                <div className="field-value name-value">{name || 'Trench Card'}</div>
+              </div>
+
+              <div className="field-group">
+                <label>DoB (Date of Bagholding)</label>
+                <div className="field-value">25 Dec 2025</div>
+              </div>
+
+              <div className="field-group">
+                <label>PnL / Status</label>
+                <div className={`field-value pnl-value ${pnl.includes('-') ? 'rekt' : 'moon'}`}>
+                  {pnl || 'SURVIVING'}
+                </div>
+              </div>
+
+              <div className="field-group">
+                <label>Expires on</label>
+                <div className="field-value">31 Dec 2026</div>
+              </div>
+            </div>
+
+            <div className="card-hologram-section">
+              <div className="hologram-patch">
+                <span>PASS</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="card-bottom-row">
+            <div className="card-number">
+              5843 6795 0100 {Math.floor(Math.random() * 9000) + 1000}
+            </div>
+          </div>
+
+          <div className="card-footer-row">
+            <div className="footer-logo">
+              <div className="footer-logo-bold">TSC</div>
+              <div className="footer-logo-text">Trenches Survivor Card</div>
+            </div>
+            <div className="footer-year">2025</div>
           </div>
         </div>
       </div>
